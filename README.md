@@ -10,7 +10,7 @@ close:
 #settings配置说明
 <pre>
   settings = {
-    "position":[left,top], //位置：值为数字
+    "position":[xpos,ypos], //位置：值为数字
     "title":"信息", //弹框标题
     "dragable":true, //是否可以拖拽
     "button":{
@@ -21,7 +21,7 @@ close:
             "className":className //按钮class
         }]
     },
-    "area":[xpos, ypos], //弹出框宽高：值为数字
+    "area":[width, height], //弹出框宽高：值为数字
     "content":htmlstr // 内容 html字符串
 }
 </pre>
