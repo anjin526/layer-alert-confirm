@@ -1,0 +1,84 @@
+.tg-ly-main{
+	position: fixed;
+	background-color: #fff;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+.tg-ly-title{
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	background-color: #bbc9d7;
+	position: relative;
+    line-height: 2.5;
+}
+.tg-ly-close{
+    font-family: 微软雅黑;
+    font-style: initial;
+    position: absolute;
+    top:50%;
+    right:10px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+}
+.tg-ly-close:hover{
+	color:#666;
+}
+.tg-lyt-word{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1;
+    font-weight: bold;
+    line-height: 50px;
+    padding:0 30px;
+}
+.tg-ly-content{
+	background-color: #fff;
+	padding:30px 40px;
+}
+.tg-ly-footer{
+	text-align: center;
+	padding-bottom: 30px;
+}
+.tg-ly-btn{
+    background-color: #ff5050;
+    border-radius: 2px;
+    line-height: 28px;
+    margin: 0 6px;
+    padding: 0 15px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: 0;
+}
+.tg-ly-btn:hover{
+	opacity: .8;
+}
+.tg-ly-mask{
+	text-indent: -9999px;
+	background-color: #000;
+	opacity: .8;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.layui-layer-moves {
+    position: absolute;
+    border: 3px solid #666;
+    border: 3px solid rgba(0, 0, 0, .5);
+    cursor: move;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .3);
+    opacity:.5;
+    filter: alpha(opacity=50);
+    z-index:9999999;
+}
+

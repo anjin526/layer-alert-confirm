@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="tglayer.css">
+	<style type="text/css" media="screen">
+		body{
+			background-color:#ccc;
+		}
+		.main-wraper{
+			text-align:center;
+			margin-top:300px;
+		}
+		.showLayer{
+			margin:0 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-wraper">
+		<button class="showLayer1 showLayer">显示弹层1</button>
+		<button class="showLayer2 showLayer">显示弹层2</button>
+	<div>
+
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="jquery.tg.layer.min.js"></script>
+	<script>
+	$(function(){
+
+		var settings1 = {
+			// "position":[700 , 20], //位置
+			"title":"测试弹出框", //标题
+			"dragable":true, //是否可以拖拽
+			"button":{
+        		"showBtn":true
+        		// "btns":[{
+        		// 	"valueStr":"测试按钮",
+        		// 	"callback": showMsg, //点击触发事件
+        		// 	"className":"test-btn" //class
+        		// }]
+        	},
+			// "area":[xpos, ypos], //坐标位置
+			"content":"<ul><li>第一行</li><li>第二行</li></ul>" //内容 html字符串
+		};
+
+		var settings2 = {
+			// "position":[left,right], //位置
+			"title":"测试弹出框", //标题
+			"dragable":true, //是否可以拖拽
+			"button":{
+        		"showBtn":true,
+        		"btns":[{
+        			"valueStr":"测试按钮",
+        			"callback": showMsg, //点击触发事件
+        			"className":"test-btn" //class
+        		}]
+        	},
+        	"position": [0,200],
+        	"shade":true,
+			// "area":[xpos, ypos], //坐标位置
+			"content":"<p>第二个弹框</p>", //内容 html字符串
+			"dragable":true
+		};
+
+		var mylayer1;
+		var mylayer2;
+		$(".showLayer1").click(function(){
+			// mylayer = TGUI.showLayer(settings1);
+			mylayer1 = TGUI.layer.open(settings1);
+		});
+
+		$(".showLayer2").click(function(){
+			// mylayer = TGUI.showLayer(settings2);
+			mylayer2 = TGUI.layer.open(settings2);
+		});
+
+		function showMsg(){
+			alert("即将关闭该弹窗");
+			TGUI.layer.close(mylayer2);
+		}
+	});
+
+	
+	</script>
+</body>
+</html>
