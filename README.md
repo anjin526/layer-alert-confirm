@@ -14,7 +14,7 @@ close:
     "title":"信息", //弹框标题
     "dragable":true, //是否可以拖拽
     "button":{
-        "showBtn":true, //是否显示按钮
+        "showBtn":true, //是否显示按钮（如果为true,btns为空，那么默认显示确认按钮)
         "btns":[{
             "valueStr":"确定", //按钮文字
             "callback": func,  //点击按钮触发事件
@@ -22,6 +22,7 @@ close:
         }]
     },
     "area":[width, height], //弹出框宽高：值为数字
-    "content":htmlstr // 内容 html字符串
+    "content":htmlstr, // 内容 html字符串
+    "shade":true //是否显示遮罩层
 }
 </pre>
