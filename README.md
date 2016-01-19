@@ -1,11 +1,14 @@
 # layer
 自己写的一个简单的弹框插件，可以自动以模拟alert、confirm等常见弹框
 #主要接口
+<pre>
 open:
   mylayer = TGUI.layer.open(settings);
 close:
   TGUI.layer.close(mylayer);
+</pre>
 #settings配置说明
+<pre>
   settings = {
     "position":[left,top], //位置：值为数字
     "title":"信息", //弹框标题
@@ -21,3 +24,4 @@ close:
     "area":[xpos, ypos], //弹出框宽高：值为数字
     "content":htmlstr // 内容 html字符串
 }
+</pre>
