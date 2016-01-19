@@ -4,6 +4,8 @@
     "use strict";
     var doc = window.document,
         win = $(window),
+
+        //默认配置
         defaults = {
             "title": "信息",
             "area": [580, "auto"],
@@ -19,6 +21,7 @@
         doms = ["tgLayer", "tg-ly-title"];
 
     var layer = {
+        //版本号
         version: "1.0",
         open: function(opntions) {
             var layer = new layerClass(opntions);
@@ -60,6 +63,7 @@
 
     }
 
+    //创建模板
     lpt.createVessel = function() {
 
         var that = this,
@@ -92,6 +96,7 @@
         });
     }
 
+    //初始化按钮
     lpt.initLayerBtns = function() {
         var that = this,
             settings = this.settings,
@@ -102,6 +107,7 @@
             btnElement, $btnElement,
             $layer = this.$layerFragment;
 
+        //是否显示按钮
         if (button.showBtn) {
             if (btnsLen) {
                 for (; i < btnsLen; i++) {
@@ -110,6 +116,7 @@
                     $btnElement.click(btnElement.callback || function() {});
                 }
             } else {
+                //默认显示确定按钮
                 $btnElement = $('<button class="ok-btn tg-ly-btn">确定</button>');
                 $btnElement.click(function() {
                     that.closeLayer();
@@ -119,6 +126,7 @@
         }
     }
 
+    //位置和宽高设置
     lpt.layerOffset = function() {
         var settings = this.settings,
             $layer = this.$layerFragment,
@@ -155,6 +163,7 @@
         });
     }
 
+    //关闭
     lpt.closeLayer = function(layerId) {
 
         var layerId = doms[0] + (layerId || this.layIndex);
@@ -162,6 +171,7 @@
         $("#" + layerId).remove();
     }
 
+    //是否可以拖拽
     lpt.layerDragable = function() {
         var that = this,
             $layer = this.$layerFragment,
